@@ -1,0 +1,194 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\EmployeeRecordSystem.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\EmployeeRecordSystem.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\EmployeeRecordSystem.Api.csproj",
+        "projectName": "EmployeeRecordSystem.Api",
+        "projectPath": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\EmployeeRecordSystem.Api.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Application\\EmployeeRecordSystem.Application.csproj": {
+                "projectPath": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Application\\EmployeeRecordSystem.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Application\\EmployeeRecordSystem.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Application\\EmployeeRecordSystem.Application.csproj",
+        "projectName": "EmployeeRecordSystem.Application",
+        "projectPath": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Application\\EmployeeRecordSystem.Application.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Domain\\EmployeeRecordSystem.Domain.csproj": {
+                "projectPath": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Domain\\EmployeeRecordSystem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Domain\\EmployeeRecordSystem.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Domain\\EmployeeRecordSystem.Domain.csproj",
+        "projectName": "EmployeeRecordSystem.Domain",
+        "projectPath": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Domain\\EmployeeRecordSystem.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

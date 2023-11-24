@@ -1,0 +1,11 @@
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\bin\Debug\net7.0\EmployeeRecordSystem.Domain.deps.json
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\bin\Debug\net7.0\EmployeeRecordSystem.Domain.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\bin\Debug\net7.0\EmployeeRecordSystem.Domain.pdb
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\obj\Debug\net7.0\EmployeeRecordSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\obj\Debug\net7.0\EmployeeRecordSystem.Domain.AssemblyInfoInputs.cache
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\obj\Debug\net7.0\EmployeeRecordSystem.Domain.AssemblyInfo.cs
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\obj\Debug\net7.0\EmployeeRecordSystem.Domain.csproj.CoreCompileInputs.cache
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\obj\Debug\net7.0\EmployeeRecordSystem.Domain.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\obj\Debug\net7.0\refint\EmployeeRecordSystem.Domain.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\obj\Debug\net7.0\EmployeeRecordSystem.Domain.pdb
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Domain\obj\Debug\net7.0\ref\EmployeeRecordSystem.Domain.dll

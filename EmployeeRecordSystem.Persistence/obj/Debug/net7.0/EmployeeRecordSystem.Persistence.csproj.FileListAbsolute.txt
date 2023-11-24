@@ -1,0 +1,17 @@
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\bin\Debug\net7.0\EmployeeRecordSystem.Persistence.deps.json
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\bin\Debug\net7.0\EmployeeRecordSystem.Persistence.runtimeconfig.json
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\bin\Debug\net7.0\EmployeeRecordSystem.Persistence.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\bin\Debug\net7.0\EmployeeRecordSystem.Persistence.pdb
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\bin\Debug\net7.0\EmployeeRecordSystem.Domain.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\bin\Debug\net7.0\EmployeeRecordSystem.Domain.pdb
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\EmployeeRecordSystem.Persistence.csproj.AssemblyReference.cache
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\EmployeeRecordSystem.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\EmployeeRecordSystem.Persistence.AssemblyInfoInputs.cache
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\EmployeeRecordSystem.Persistence.AssemblyInfo.cs
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\EmployeeRecordSystem.Persistence.csproj.CoreCompileInputs.cache
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\EmployeeRecordSystem.Persistence.csproj.CopyComplete
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\EmployeeRecordSystem.Persistence.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\refint\EmployeeRecordSystem.Persistence.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\EmployeeRecordSystem.Persistence.pdb
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\EmployeeRecordSystem.Persistence.genruntimeconfig.cache
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Persistence\obj\Debug\net7.0\ref\EmployeeRecordSystem.Persistence.dll
