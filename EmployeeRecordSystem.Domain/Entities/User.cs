@@ -13,7 +13,10 @@ public class User : BaseModel
     public string Email { get; set; } = string.Empty;
     public string Phone { get; set; } = null!;
     public string Password { get; set; } = null!;
-    public UserStatus UserStatus { get; set; }
+    public string? Salt { get; set; } = null!;
+    public string? ResetCode { get; set; } = null!;
+
+    public UserStatus UserStatus { get; set; } = UserStatus.Active;
 
     #region Nav
     public Employee Employee { get; set; }

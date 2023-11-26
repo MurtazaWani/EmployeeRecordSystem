@@ -14,9 +14,12 @@ public class UserRequest
     public string Password { get; set; } = null!;
 }
 
-public class UserResponse : UserRequest
+public class UserResponse
 {
     public Guid Id { get; set; }
+    public string Username { get; set; } = null!;
+    public string Email { get; set; } = null!;
+    public string Phone { get; set; } = null!;
 }
 
 public class UserUpdateRequest : UserRequest

@@ -1,4 +1,5 @@
-
+using EmployeeRecordSystem.Application;
+using EmployeeRecordSystem.Persistence;
 namespace EmployeeRecordSystem.Api
 {
     public class Program
@@ -10,6 +11,8 @@ namespace EmployeeRecordSystem.Api
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.GetApplicationServices();
+            builder.Services.GetPersistenceServices(builder.Configuration);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

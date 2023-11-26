@@ -26,4 +26,19 @@ public class APIResponse<T>
         Message = message;
         Result = result;
     }
+
+    public static APIResponse<T> SuccessResponse(HttpStatusCode statusCode, T? result = default)
+    {
+        return new APIResponse<T>(statusCode, true, "success", result);
+    }
+
+    public static APIResponse<T> ErrorResponse(HttpStatusCode statusCode, T? result = default)
+    {
+        return new APIResponse<T>(statusCode, false, "error", result);
+    }
+
+    public static APIResponse<T> ErrorResponse()
+    {
+        return new APIResponse<T>(HttpStatusCode.InternalServerError, false, "error", default);
+    }
 }

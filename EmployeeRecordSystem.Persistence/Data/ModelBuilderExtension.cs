@@ -17,7 +17,7 @@ internal static class ModelBuilderExtension
         {
             Id = id,
             Username = "admin",
-            Phone = "123456",
+            Phone = "+910123456789",
             Email = "murtazas899@gmail.com",
             Password = "admin",
             CreatedBy = Guid.NewGuid(),

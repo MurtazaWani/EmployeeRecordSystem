@@ -17,15 +17,15 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet]
-    public Task<IEnumerable<APIResponse<EmployeeResponse>>> GetAll()
+    public async Task<IEnumerable<APIResponse<UserResponse>>> GetAll()
     {
-        return null;
+        return await service.GetUsers();
     }
 
     [HttpPost]
-    public Task<APIResponse<EmployeeResponse>> Add()
+    public async Task<APIResponse<UserResponse>> Add(UserRequest model)
     {
-        return null;
+        return await service.AddUser(model);
     }
 
 }

@@ -9,6 +9,6 @@ namespace EmployeeRecordSystem.Domain.Entities;
 public class BaseModel
 {
     public Guid Id { get; set; }
-    public Guid CreatedBy { get; set; }
-    public DateTimeOffset CreatedOn { get; set; }
+    public Guid CreatedBy { get; set; } = Guid.NewGuid();
+    public DateTimeOffset CreatedOn { get; set; } = DateTimeOffset.Now;
 }
