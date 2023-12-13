@@ -133,7 +133,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseModel, new()
     #endregion
 }
 
-#region Dapper Method As Extension On EF Core
+#region Dapper Methods As Extension On EF Core
 
 public static class DapperAsExtensionOnEFCore
 {
