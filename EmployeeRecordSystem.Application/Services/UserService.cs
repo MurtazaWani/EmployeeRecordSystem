@@ -3,12 +3,9 @@ using EmployeeRecordSystem.Application.Abstraction.IRepositories;
 using EmployeeRecordSystem.Application.Abstraction.IServices;
 using EmployeeRecordSystem.Application.RRModels;
 using EmployeeRecordSystem.Application.Shared;
+using EmployeeRecordSystem.Application.Utils;
 using EmployeeRecordSystem.Domain.Entities;
 using System.Net;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmployeeRecordSystem.Application.Services;
 
@@ -23,37 +20,43 @@ public class UserService : IUserService
         this.mapper = mapper;
     }
 
-    public async Task<APIResponse<UserResponse>> AddUser(UserRequest model)
+    public async Task<APIResponse<UserResponse>> Signup(UserRequest model)
     {
         var user = mapper.Map<User>(model);
+        if(await repository.IsExistsAsync(u => u.Username  == model.Username))
+        {
+            return APIResponse<UserResponse>.ErrorResponse(HttpStatusCode.BadRequest ,"Username already exists");
+        }
+        //var exists = await repository.IsExistsAsync(x => x.Username == user.Username);
+        user.Salt = AppEncryption.GenerateSalt();
+        user.Password = AppEncryption.CreatePasswordHash(user.Password, user.Salt);
         var res = await repository.AddAsync(user);
         if (res > 0)
         {
-            var userResponse = mapper.Map<UserResponse>(user);
-
             // without calling method
             //return new APIResponse<UserResponse>(HttpStatusCode.OK, true, "success", userResponse);
 
             // with calling method
-            return APIResponse<UserResponse>.SuccessResponse(HttpStatusCode.Created, userResponse);
+            return APIResponse<UserResponse>.SuccessResponse(HttpStatusCode.Created, mapper.Map<UserResponse>(user));
         }
-        else return APIResponse<UserResponse>.ErrorResponse(HttpStatusCode.BadRequest, null);
+        else return APIResponse<UserResponse>.ErrorResponse(HttpStatusCode.BadRequest);
     }
 
-    public async Task<IEnumerable<APIResponse<UserResponse>>> GetUsers()
+    public async Task<APIResponse<IEnumerable<UserResponse>>> GetUsers()
     {
         var users = await repository.GetAllAsync();
-        if(users != null)
+        var usersResponse = users.Select(x => new UserResponse
         {
-            return users.Select(x => APIResponse<UserResponse>.SuccessResponse(HttpStatusCode.OK, new UserResponse
-            {
-                Id = x.Id,
-                Username = x.Username,
-                Email = x.Email,
-                Phone = x.Phone,
-            }));
-        }
-        else return null;
-    }
+            Id = x.Id,
+            Username = x.Username,
+            Email = x.Email,
+            Phone = x.Phone,
+        });
 
+        if(users.Any())
+        {
+            return APIResponse<IEnumerable<UserResponse>>.SuccessResponse(HttpStatusCode.OK, usersResponse);
+        }
+        else return APIResponse<IEnumerable<UserResponse>>.ErrorResponse(HttpStatusCode.InternalServerError, "something went wrong");
+    }
 }
