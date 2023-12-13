@@ -17,14 +17,14 @@ public class UserRepository : BaseRepository<User>, IUserRepository
         this.context = context;
     }
 
-    public async Task<IEnumerable<User>> GetAllAsync()
-    {
-        return await Task.Run(() => context.Set<User>());
-    }
+    //public async Task<IEnumerable<User>> GetAllAsync()
+    //{
+    //    return await Task.Run(() => context.Set<User>());
+    //}
 
-    public async Task<int> AddAsync(User model)
-    {
-        await context.Set<User>().AddAsync(model);
-        return await context.SaveChangesAsync();
-    }
+    //public async Task<int> AddAsync(User model)
+    //{
+    //    await context.Set<User>().AddAsync(model);
+    //    return await context.SaveChangesAsync();
+    //}
 }

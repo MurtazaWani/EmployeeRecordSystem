@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -9,6 +10,8 @@ namespace EmployeeRecordSystem.Application.Abstraction.IRepositories;
 
 public interface IBaseRepository<T>
 {
+    #region async methods
+
     Task<IEnumerable<T>> GetAllAsync();
     Task<IEnumerable<T>> GetAllAsync(int pageNo, int pageSize);
     Task<int> AddAsync(T entity);
@@ -22,4 +25,16 @@ public interface IBaseRepository<T>
     Task<int> DeleteRangeAsync(List<Guid> ids);
     Task<int> DeleteRangeAsync(List<T> entityList);
     Task<int> AddRangeAsync(List<T> entity);
+
+    #endregion
+
+    #region dapper methods
+    Task<int> ExecuteAsync<T>(string sql, object? param, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null);
+
+    Task<IEnumerable<T>> QueryAsync<T>(string sql, object? param, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null);
+
+    Task<T?> FirstOrDefault<T>(string sql, object? param, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null);
+    Task<T?> SingleOrDefault<T>(string sql, object? param, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null);
+
+    #endregion
 }

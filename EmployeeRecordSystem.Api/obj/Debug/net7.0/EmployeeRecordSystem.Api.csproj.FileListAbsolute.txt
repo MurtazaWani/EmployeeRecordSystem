@@ -82,3 +82,5 @@ D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Api\bin\Debug\net7.0\Mo
 D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Api\bin\Debug\net7.0\System.CodeDom.dll
 D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Api\bin\Debug\net7.0\AutoMapper.dll
 D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Api\bin\Debug\net7.0\EmployeeRecordSystem.Api.staticwebassets.runtime.json
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Api\bin\Debug\net7.0\Dapper.dll

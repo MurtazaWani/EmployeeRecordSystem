@@ -1,11 +1,54 @@
 {
   "Version": 1,
-  "Hash": "j8SGAkcecbxbBNjc2f8F7m6fxBlxHE9jh7DZ/WrFZwk=",
+  "Hash": "AU6o2SLHAvHf6eeYfy/pDa9tzePZyot6fuw4l04JC4g=",
   "Source": "EmployeeRecordSystem.Api",
   "BasePath": "_content/EmployeeRecordSystem.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "EmployeeRecordSystem.Api\\wwwroot",
+      "Source": "EmployeeRecordSystem.Api",
+      "ContentRoot": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\wwwroot\\",
+      "BasePath": "_content/EmployeeRecordSystem.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\wwwroot\\Files\\9e7d5e79-7543-4ed9-994b-5c2917444c9c.png",
+      "SourceId": "EmployeeRecordSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\wwwroot\\",
+      "BasePath": "_content/EmployeeRecordSystem.Api",
+      "RelativePath": "Files/9e7d5e79-7543-4ed9-994b-5c2917444c9c.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\9e7d5e79-7543-4ed9-994b-5c2917444c9c.png"
+    },
+    {
+      "Identity": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\wwwroot\\Files\\Screenshot 2023-07-27 125451.png",
+      "SourceId": "EmployeeRecordSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NETCore\\EmployeeRecordSystem\\EmployeeRecordSystem.Api\\wwwroot\\",
+      "BasePath": "_content/EmployeeRecordSystem.Api",
+      "RelativePath": "Files/Screenshot 2023-07-27 125451.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Screenshot 2023-07-27 125451.png"
+    }
+  ]
 }

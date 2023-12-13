@@ -17,3 +17,20 @@ public sealed class UserProfile : Profile
         CreateMap<User, UserResponse>();
     }
 }
+
+public sealed class AppFileProfile : Profile
+{
+    public AppFileProfile()
+    {
+        CreateMap<AppFiles, AppFileResponse>();
+    }
+}
+
+public sealed class EmployeeProfile : Profile
+{
+    public EmployeeProfile()
+    {
+        CreateMap<EmployeeRequest, Employee>();
+        CreateMap<Employee, EmployeeResponse>();
+    }
+}

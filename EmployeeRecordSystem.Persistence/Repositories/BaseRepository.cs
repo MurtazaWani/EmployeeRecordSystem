@@ -1,13 +1,11 @@
-﻿using EmployeeRecordSystem.Application.Abstraction.IRepositories;
+﻿using Dapper;
+using EmployeeRecordSystem.Application.Abstraction.IRepositories;
 using EmployeeRecordSystem.Domain.Entities;
 using EmployeeRecordSystem.Persistence.Data;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmployeeRecordSystem.Persistence.Repositories;
 
@@ -19,6 +17,8 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseModel, new()
     {
         this.context = context;
     }
+
+    #region async methods
     public async Task<int> AddAsync(T model)
     {
         await context.Set<T>().AddAsync(model);
@@ -105,5 +105,100 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseModel, new()
         await Task.Run(() => context.Set<T>().Update(entity));
         return await context.SaveChangesAsync();
     }
+
+    #endregion
+
+    #region dapper methods
+
+    public async Task<int> ExecuteAsync<T>(string sql, object? param = default, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null)
+    {
+        return await context.ExecuteAsyncDapperExtension<T>(sql, param, commandType, transaction);
+    }
+
+    public async Task<IEnumerable<T>> QueryAsync<T>(string sql, object? param = default, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null)
+    {
+        return await context.QueryAsyncDapperExtension<T>(sql, param, commandType, transaction);
+    }
+
+    public Task<T> FirstOrDefault<T>(string sql, object? param, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null)
+    {
+        return context.FirstOrDefaultDapperExtension<T>(sql, param, commandType, transaction);
+    }
+
+    public Task<T> SingleOrDefault<T>(string sql, object? param, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null)
+    {
+        return context.SingleOrDefaultDapperExtension<T>(sql, param, commandType, transaction);
+    }
+
+    #endregion
 }
 
+#region Dapper Method As Extension On EF Core
+
+public static class DapperAsExtensionOnEFCore
+{
+    public static async Task<IEnumerable<T>> QueryAsyncDapperExtension<T>(this DbContext context, string sql, object? param = default, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null)
+    {
+        try
+        {
+            SqlConnection connection = new(context.Database.GetConnectionString());
+            return await connection.QueryAsync<T>(sql, param, transaction, null, commandType);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+        
+        finally { context.Dispose(); }
+    }
+
+    public static async Task<int> ExecuteAsyncDapperExtension<T>(this DbContext context, string sql, object? param = default, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null)
+    {
+        try
+        {
+            SqlConnection connection = new SqlConnection(context.Database.GetConnectionString());
+            return await connection.ExecuteAsync(sql, param, transaction, null, commandType);
+        }
+
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+
+        finally
+        {
+            context.Dispose();
+        }
+    }
+
+    public static async Task<T?> SingleOrDefaultDapperExtension<T>(this DbContext context, string sql, object? param = default, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null)
+    {
+        try
+        {
+            using(SqlConnection connection = new SqlConnection(context.Database.GetConnectionString()))
+            {
+                return await connection.QuerySingleOrDefaultAsync(sql, param, transaction, null, commandType);
+            }
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }      
+    }
+
+    public static async Task<T?> FirstOrDefaultDapperExtension<T>(this DbContext context, string sql, object? param = default, CommandType commandType = CommandType.Text, IDbTransaction? transaction = null)
+    {
+        try
+        {
+            using (SqlConnection connection = new SqlConnection(context.Database.GetConnectionString()))
+            {
+                return await connection.QueryFirstOrDefaultAsync(sql, param, transaction, null, commandType);
+            }
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }
+    }
+}
+#endregion

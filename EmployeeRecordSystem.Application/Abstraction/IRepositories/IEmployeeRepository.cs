@@ -1,4 +1,5 @@
-﻿using EmployeeRecordSystem.Domain.Entities;
+﻿using EmployeeRecordSystem.Application.RRModels;
+using EmployeeRecordSystem.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,4 +10,5 @@ namespace EmployeeRecordSystem.Application.Abstraction.IRepositories;
 
 public interface IEmployeeRepository : IBaseRepository<Employee>
 {
+    Task<IEnumerable<EmployeeResponse>> GetCompactEmployees();
 }

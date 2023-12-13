@@ -14,4 +14,5 @@ public class EmployeeRecordSystemDbContext : DbContext
 
     public DbSet<User> Users { get; set; }
     public DbSet<Employee> Employees { get; set; }
+    public DbSet<AppFiles> AppFiles { get; set; }
 }

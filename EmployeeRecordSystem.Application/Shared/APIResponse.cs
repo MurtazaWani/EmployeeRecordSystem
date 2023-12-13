@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
 
 namespace EmployeeRecordSystem.Application.Shared;
 
@@ -18,7 +13,7 @@ public class APIResponse<T>
     {
         if((int)statusCode <= 100 || (int)statusCode >= 600)
         {
-            throw new ArgumentException();
+            throw new ArgumentException("incorrect status code");
         }
 
         StatusCode = statusCode;
@@ -37,8 +32,8 @@ public class APIResponse<T>
         return new APIResponse<T>(statusCode, false, "error", result);
     }
 
-    public static APIResponse<T> ErrorResponse()
+    public static APIResponse<T> ErrorResponse(HttpStatusCode statusCode, string message)
     {
-        return new APIResponse<T>(HttpStatusCode.InternalServerError, false, "error", default);
+        return new APIResponse<T>(statusCode, false, message, default);
     }
 }

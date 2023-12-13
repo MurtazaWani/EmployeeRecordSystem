@@ -18,6 +18,7 @@ public static class AssemblyReference
     {
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+        services.AddScoped<IFileRepository, FileRepository>();
         services.AddDbContextPool<EmployeeRecordSystemDbContext>(options => options.UseSqlServer(configuration.GetConnectionString(nameof(EmployeeRecordSystemDbContext))));
         return services;
     }

@@ -10,6 +10,6 @@ namespace EmployeeRecordSystem.Application.Abstraction.IServices;
 
 public interface IUserService
 {
-    public Task<IEnumerable<APIResponse<UserResponse>>> GetUsers();
-    public Task<APIResponse<UserResponse>> AddUser(UserRequest model);
+    public Task<APIResponse<IEnumerable<UserResponse>>> GetUsers();
+    public Task<APIResponse<UserResponse>> Signup(UserRequest model);
 }

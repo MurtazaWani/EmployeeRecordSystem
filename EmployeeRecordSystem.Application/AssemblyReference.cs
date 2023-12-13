@@ -12,11 +12,13 @@ namespace EmployeeRecordSystem.Application;
 
 public static class AssemblyReference
 {
-    public static IServiceCollection GetApplicationServices(this IServiceCollection services)
+    public static IServiceCollection AddApplicationServices(this IServiceCollection services, string webRootPath)
     {
-        services.AddAutoMapper(Assembly.GetExecutingAssembly());
-        services.AddScoped<IUserService, UserService>();
         services.AddScoped<IEmployeeService, EmployeeService>();
+        services.AddScoped<IUserService, UserService>();
+        services.AddSingleton<IStorageService>(new StorageService(webRootPath));
+        services.AddScoped<IFileService, FileService>();
+        services.AddAutoMapper(Assembly.GetExecutingAssembly());
         return services;
     }
 }

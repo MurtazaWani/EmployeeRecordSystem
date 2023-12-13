@@ -12,3 +12,9 @@ public enum UserStatus
     InActive = 2,
     Blocked = 3,
 }
+public enum AppModule
+{
+    User = 1,   
+    Employee = 2,
+    Department = 3,
+}
