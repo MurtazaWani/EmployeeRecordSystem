@@ -1,4 +1,5 @@
 using EmployeeRecordSystem.Application;
+using EmployeeRecordSystem.Infrastructure;
 using EmployeeRecordSystem.Persistence;
 namespace EmployeeRecordSystem.Api
 {
@@ -12,7 +13,9 @@ namespace EmployeeRecordSystem.Api
 
             builder.Services.AddControllers();
             builder.Services.AddApplicationServices(builder.Environment.WebRootPath);
-            builder.Services.GetPersistenceServices(builder.Configuration);
+            builder.Services.AddPersistenceServices(builder.Configuration);
+            builder.Services.AddAPIServices(builder.Configuration);
+            builder.Services.AddInfrastructureServices(builder.Configuration);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -27,9 +30,8 @@ namespace EmployeeRecordSystem.Api
             }
 
             app.UseStaticFiles();
-            app.UseHttpsRedirection();
-
             app.UseAuthorization();
+            //app.UseHttpsRedirection();
 
 
             app.MapControllers();

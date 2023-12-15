@@ -65,6 +65,7 @@ public class UserService : IUserService
         {
             Id = user.Id,
             Username = user.Username,
+            Token = provider.GenerateToken(user)
         };
 
         return APIResponse<LoginResponse>.SuccessResponse(HttpStatusCode.OK, loginResponse);
