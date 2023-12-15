@@ -28,4 +28,9 @@ public class UsersController : ControllerBase
         return await service.Signup(model);
     }
 
+    [HttpPost("Login")]
+    public async Task<APIResponse<LoginResponse>> Login(LoginRequest model)
+    {
+        return await service.Login(model);
+    }
 }

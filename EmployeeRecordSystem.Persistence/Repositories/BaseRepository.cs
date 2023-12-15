@@ -72,7 +72,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseModel, new()
         return await Task.Run(() => context.Set<T>().Where(expression));
     }
 
-    public async Task<T> FirstOrDefault(Expression<Func<T, bool>> expression)
+    public async Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> expression)
     {
         return await context.Set<T>().FirstOrDefaultAsync(expression);
     }

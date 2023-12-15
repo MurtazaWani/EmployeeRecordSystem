@@ -14,7 +14,7 @@ namespace EmployeeRecordSystem.Persistence;
 
 public static class AssemblyReference
 {
-    public static IServiceCollection GetPersistenceServices(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();

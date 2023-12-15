@@ -26,3 +26,16 @@ public class UserUpdateRequest : UserRequest
 {
     public Guid Id { get; set; }
 }
+
+public class LoginRequest
+{
+    public string Username { get; set; } = null!;
+    public string Password { get; set; } = null!;
+}
+
+public class LoginResponse
+{
+    public Guid Id { get; set; }
+    public string Username { get; set; } = null!;
+    public string Token { get; set; } = null!;
+}

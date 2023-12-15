@@ -12,4 +12,5 @@ public interface IUserService
 {
     public Task<APIResponse<IEnumerable<UserResponse>>> GetUsers();
     public Task<APIResponse<UserResponse>> Signup(UserRequest model);
+    Task<APIResponse<LoginResponse>> Login(LoginRequest model);
 }

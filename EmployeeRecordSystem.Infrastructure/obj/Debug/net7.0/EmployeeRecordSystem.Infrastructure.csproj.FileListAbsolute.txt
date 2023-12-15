@@ -1,0 +1,17 @@
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\bin\Debug\net7.0\EmployeeRecordSystem.Infrastructure.deps.json
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\bin\Debug\net7.0\EmployeeRecordSystem.Infrastructure.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\bin\Debug\net7.0\EmployeeRecordSystem.Infrastructure.pdb
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\EmployeeRecordSystem.Infrastructure.csproj.AssemblyReference.cache
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\EmployeeRecordSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\EmployeeRecordSystem.Infrastructure.AssemblyInfoInputs.cache
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\EmployeeRecordSystem.Infrastructure.AssemblyInfo.cs
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\EmployeeRecordSystem.Infrastructure.csproj.CoreCompileInputs.cache
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\EmployeeRecordSystem.Infrastructure.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\refint\EmployeeRecordSystem.Infrastructure.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\EmployeeRecordSystem.Infrastructure.pdb
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\ref\EmployeeRecordSystem.Infrastructure.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\bin\Debug\net7.0\EmployeeRecordSystem.Application.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\bin\Debug\net7.0\EmployeeRecordSystem.Domain.dll
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\bin\Debug\net7.0\EmployeeRecordSystem.Application.pdb
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\bin\Debug\net7.0\EmployeeRecordSystem.Domain.pdb
+D:\ASP.NETCore\EmployeeRecordSystem\EmployeeRecordSystem.Infrastructure\obj\Debug\net7.0\EmployeeRecordSystem.Infrastructure.csproj.CopyComplete

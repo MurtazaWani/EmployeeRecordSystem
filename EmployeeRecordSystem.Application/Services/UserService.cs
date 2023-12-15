@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EmployeeRecordSystem.Application.Abstraction.IJWT;
 using EmployeeRecordSystem.Application.Abstraction.IRepositories;
 using EmployeeRecordSystem.Application.Abstraction.IServices;
 using EmployeeRecordSystem.Application.RRModels;
@@ -13,11 +14,13 @@ public class UserService : IUserService
 {
     private readonly IUserRepository repository;
     private readonly IMapper mapper;
+    private readonly IJWTProvider provider;
 
-    public UserService(IUserRepository repository, IMapper mapper)
+    public UserService(IUserRepository repository, IMapper mapper, IJWTProvider provider)
     {
         this.repository = repository;
         this.mapper = mapper;
+        this.provider = provider;
     }
 
     public async Task<APIResponse<UserResponse>> Signup(UserRequest model)
@@ -40,6 +43,31 @@ public class UserService : IUserService
             return APIResponse<UserResponse>.SuccessResponse(HttpStatusCode.Created, mapper.Map<UserResponse>(user));
         }
         else return APIResponse<UserResponse>.ErrorResponse(HttpStatusCode.BadRequest);
+    }
+
+    public async Task<APIResponse<LoginResponse>> Login(LoginRequest model)
+    {
+        var user = await repository.FirstOrDefaultAsync(x =>  x.Username == model.Username);
+
+        if (user is null)
+        {
+            return APIResponse<LoginResponse>.ErrorResponse(HttpStatusCode.NotFound, "username or password incorrect");
+        }
+
+        var isCorrect = AppEncryption.ComparePassword(user.Password, model.Password, user.Salt);
+
+        if(!isCorrect)
+        {
+            return APIResponse<LoginResponse>.ErrorResponse(HttpStatusCode.NotFound, "username or password is incorrect");
+        }
+
+        var loginResponse = new LoginResponse()
+        {
+            Id = user.Id,
+            Username = user.Username,
+        };
+
+        return APIResponse<LoginResponse>.SuccessResponse(HttpStatusCode.OK, loginResponse);
     }
 
     public async Task<APIResponse<IEnumerable<UserResponse>>> GetUsers()

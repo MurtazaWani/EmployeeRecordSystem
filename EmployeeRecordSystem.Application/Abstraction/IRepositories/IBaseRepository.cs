@@ -21,7 +21,7 @@ public interface IBaseRepository<T>
     Task<T> GetByIdAsync(Guid id);
     Task<IEnumerable<T>> FindByAsync(Expression<Func<T, bool>> expression);
     Task<bool> IsExistsAsync(Expression<Func<T, bool>> expression);
-    Task<T> FirstOrDefault(Expression<Func<T, bool>> expression);
+    Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> expression);
     Task<int> DeleteRangeAsync(List<Guid> ids);
     Task<int> DeleteRangeAsync(List<T> entityList);
     Task<int> AddRangeAsync(List<T> entity);
